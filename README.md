@@ -17,7 +17,7 @@ Personal web-site
 - صفحة اتصال تفاعلية
 
 ## كيفية الاستخدام
-1. قم بزيارة الموقع على العنوان [www.dropydrop.com](https://Ghadah-696.github.io/dropydrop/)
+1. قم بزيارة الموقع على العنوان [www.dropydrop.com](https://ghadah-696.github.io/Dropydrop//)
 2. استعرض الصفحات لمعرفة المزيد عني وعن خدماتي
 3. استخدم صفحة الاتصال للتواصل معي لأي استفسارات أو طلبات
 
