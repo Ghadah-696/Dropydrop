@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.promotions {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.promotion {
+    margin-bottom: 20px;
+}
+
+.promotion h3 {
+    margin-top: 0;
+}
+
+.contact {
+    margin-top: 40px;
+}
+
+/* تحسين عرض ملخص العروض */
+.promotions-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.promotions-summary li {
+    margin-bottom: 10px;
+}
+
+.promotions-summary a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.promotions-summary a:hover {
+    text-decoration: underline;
+}

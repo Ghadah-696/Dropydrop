@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        form { max-width: 300px; margin: auto; }
+        label, input { display: block; margin: 8px 0; }
+        .total { margin-top: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>Order Page</h1>
+    <form id="orderForm">
+        <label for="service">Choose Service:</label>
+        <select id="service">
+            <option value="web">Web Development - $500</option>
+            <option value="mobile">Mobile App Development - $700</option>
+        </select>
+        <label for="discountCode">Discount Code:</label>
+        <input type="text" id="discountCode" placeholder="Enter discount code">
+        <button type="button" onclick="applyDiscount()">Apply Discount</button>
+    </form>
+    <div class="total">
+        <p>Total Price: <span id="totalPrice">$500</span></p>
+    </div>
+    <script>
+        function applyDiscount() {
+            const services = {
+                web: 500,
+                mobile: 700
+            };
+            const discountCodes = {
+                NEWWEBSITE20: 0.20,
+                COMBO30: 0.30
+            };
+            const selectedService = document.getElementById('service').value;
+            const enteredCode = document.getElementById('discountCode').value;
+            let totalPrice = services[selectedService];
+            if (discountCodes[enteredCode]) {
+                totalPrice = totalPrice * (1 - discountCodes[enteredCode]);
+            }
+            document.getElementById('totalPrice').textContent = `$${totalPrice.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

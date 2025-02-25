@@ -1,0 +1,74 @@
+body
+{
+    direction: rtl;
+    text-align: right;
+}
+.text-right {
+   
+    text-align: left;
+}
+.font
+{
+    font-size:4rem; 
+}
+.text-left {
+text-align: right!important;
+}
+.text-right {
+    margin-top: 2px;
+    float: left;
+}
+.bf-foot-social a {
+   text-align: left;
+    padding: 2px 5px;
+    padding-top: 5px;
+    padding-left: 1px;
+    padding-bottom: 5px;
+}
+.mr-auto, .mx-auto {
+    margin-right: 0!important;
+    /* margin-right: auto!important; */
+}
+
+.nav-link:hover {
+    color: #1a6aa7;
+}
+
+.imgpage ,.sizim ,.imgpageserv,.serv_icon,.imgcont ,.imgprod,.imgpagetest,.imgpagefaq,.divdisplayf,.display-5
+{ 
+     direction: ltr;
+     float: right;
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 5px;
+        }
+.align
+{
+    float: left;
+}
+.bf-foot-social
+{
+    
+    direction: ltr;
+}
+.socialf
+{
+    text-align: center;
+    direction: ltr;
+}
+.langdis {
+    
+    direction: rtl;
+    float: left;
+}
+.footdis
+{
+ text-align: center;
+   float: center;   
+}
+.btn
+{float: left;
+    text-align: left;
+}
+
+ 
