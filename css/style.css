@@ -78,17 +78,12 @@ h4{
 }
 p{
     color: var(--text2);
-    letter-spacing:1px ;
+/*     letter-spacing:1px ; */
     line-height: 1.8rem;
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
   }
-p ar{
-    color: var(--text2);
-    line-height: 1.8rem;
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-  }
+
   /*-------------------------------------------------------------------------
   ---------- Nav 
    --------------------------------------------------------------------------*/
