@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="icon" href="icons/weblogo2.svg">
+    ///////////
+    <!-- Lightbox CSS -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" /> -->
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    ///////////
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!--     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" /> -->
@@ -166,7 +173,20 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-<script>
+    <script>
+  document.querySelectorAll('.swiper-container').forEach(function (container) {
+    new Swiper(container, {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: container.querySelector('.swiper-button-next'),
+        prevEl: container.querySelector('.swiper-button-prev'),
+      },
+    });
+  });
+</script>
+
+<!-- <script>
     var swipers = document.querySelectorAll('.swiper-container');
     swipers.forEach(function(swiperContainer) {
         new Swiper(swiperContainer, {
@@ -179,7 +199,7 @@
         //    
         });
     });
-</script>
+</script> -->
 
 <!-- </head>
 <body> -->
