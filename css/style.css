@@ -138,6 +138,7 @@ nav h2{
   top: 50%;
   transform: translateY(-50%);
 /*   z-index: 10; */
+   display: contents;
 }
 ********************************** 
 .language-switcher {
