@@ -169,16 +169,17 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-  document.querySelectorAll('.swiper-container').forEach(function (container) {
-    new Swiper(container, {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: container.querySelector('.swiper-button-next'),
-        prevEl: container.querySelector('.swiper-button-prev'),
-      },
-    });
+document.querySelectorAll('.swiper-container').forEach(function (container) {
+  new Swiper(container, {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: container.querySelector('.swiper-button-next'),
+      prevEl: container.querySelector('.swiper-button-prev'),
+    },
   });
+});
+
 </script>
 
 <!-- <script>
