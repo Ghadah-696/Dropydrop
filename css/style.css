@@ -132,14 +132,7 @@ nav h2{
  ------------------- Languages
  -------------------------------------------------------- */
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #000; /* أو أي لون تريده للأسهم */
-  top: 50%;
-  transform: translateY(-50%);
-/*   z-index: 10; */
-   display: contents;
-}
+
 ********************************** 
 .language-switcher {
     text-align: center;
@@ -159,6 +152,7 @@ nav h2{
     color: var(--lightColor);
 }
 swiper-container {
+    position: relative;
   width: 100%;
   padding: 20px 0;
 }
@@ -186,7 +180,28 @@ swiper-container {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+.swiper-button-next,
+.swiper-button-prev {
+   color: #000;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  display: block;
+  z-index: 10;
+  opacity: 0.8; /* تظهر بخفة */
+}
+.swiper-button-next {
+  right: 10px;
+}
+.swiper-button-prev {
+  left: 10px;
+}
 
+/* إظهار الأسهم بشكل أوضح عند التمرير */
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+  opacity: 1;
+}
 /* .swiper-slide img {
     width: 100px;
     height: 100px;
