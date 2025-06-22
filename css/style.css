@@ -131,12 +131,13 @@ nav h2{
  /* -------------------------------------------------------
  ------------------- Languages
  -------------------------------------------------------- */
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #000; /* أو أي لون تريده للأسهم */
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
+/*   z-index: 10; */
 }
 ********************************** 
 .language-switcher {
@@ -191,10 +192,10 @@ swiper-container {
     object-fit: cover;
 } */
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
     color: #333;
-}
+} */
  /* -------------------------------------------------------
  ------------------- The End Languages
  -------------------------------------------------------- */
