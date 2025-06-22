@@ -148,10 +148,24 @@ nav h2{
     background-color: var(--sections);
     color: var(--lightColor);
 }
+swiper-container {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swiper-wrapper {
+  display: flex !important;
+}
 .swiper-container {
     width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
+/*     padding-bottom: 20px; */
 }
 .swiper-slide {
     background: #fff;
@@ -163,11 +177,11 @@ nav h2{
     overflow: hidden;
 }
 
-.swiper-slide img {
+/* .swiper-slide img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-}
+} */
 
 .swiper-button-next,
 .swiper-button-prev {
