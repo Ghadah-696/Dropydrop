@@ -153,8 +153,8 @@ nav h2{
 }
 swiper-container {
     position: relative;
-  width: 100%;
-  padding: 20px 0;
+/*   width: 100%;
+  padding: 20px 0; */
 }
 
 .swiper-slide img {
