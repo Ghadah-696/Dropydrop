@@ -104,3 +104,38 @@ function showPage(page) {
 
 // -------------------------projects.html
 
+// --------------------------------------------------------------------
+// ---------contact.html-----------------------
+// -------------------------------------------------------------------
+
+  const form = document.querySelector('#contact-form form');
+  const thankMessage = document.getElementById('thankMessage');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        thankMessage.style.display = 'block';
+        form.reset();
+
+        setTimeout(() => {
+          thankMessage.style.display = 'none';
+        }, 5000);
+      } else {
+        alert('حدث خطأ أثناء الإرسال.');
+      }
+    })
+    .catch(() => {
+      alert('فشل الاتصال بالخادم.');
+    });
+  });
+
+
+
