@@ -122,36 +122,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
  <script>
-    const form = document.getElementById('contactForm');
-    const thankMessage = document.getElementById('thankMessage');
-
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // منع الإرسال التقليدي
+  event.preventDefault(); // يمنع الانتقال التلقائي
 
-      const formData = new FormData(form);
+  const formData = new FormData(form);
 
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-       
-      })
-      .then(response => {
-        if (response.ok) {
-          thankMessage.style.display = 'block';
-          form.reset();
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      thankMessage.style.display = 'block';
+      form.reset();
 
-          // اخفاء رسالة الشكر بعد 5 ثواني
-          setTimeout(() => {
-            thankMessage.style.display = 'none';
-          }, 5000);
-        } else {
-          alert('حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقاً.');
-        }
-      })
-      .catch(() => {
-        alert('حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقاً.');
-      });
-    });
+      setTimeout(() => {
+        thankMessage.style.display = 'none';
+      }, 5000);
+    } else {
+      alert('حدث خطأ أثناء الإرسال.');
+    }
+  })
+  .catch(() => {
+    alert('فشل الاتصال بالخادم.');
+  });
+});
+
   </script>
 
 
