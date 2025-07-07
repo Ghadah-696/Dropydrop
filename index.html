@@ -7,34 +7,141 @@
     <!--Here the description what will show in browser -->
     <meta name="description" content="Best To Design Web Sites.....">
     <meta name="keywords" content="Ghada Abdullah,Ghada, php,Dropydrop,dropydrop, Dropy, Dropydrop website, css, Js,MySql, flutter,dart, تصميم مواقع, دروبي ,موقع دروبي">
-    <meta name="google-site-verification" content="stA-TFfVj_-tl-CeP2fqGmhvlSuhyT87HJkShcc3mFA" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rtl.css">
     <link rel="icon" href="icons/weblogo2.svg">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- داخل <head> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- أضف هذا داخل <head> قبل </head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-+qdLa5Z8p6B+0B2G4ydWZT+z5P6p/31qSfFzDff3DjE15CV+Oh6yKxDb2HDGJfK0" crossorigin="anonymous">
 
 </head>
+<!-- قبل </body> -->
+
+
 <body>
     <header id="header-container"></header>
-         <!-- Home Section  -->
         
-             <section class="home section-one" id="home">
-                 <div class="content">
-                     <div class="container-texts">
-                         <div class="greating">
-                             <h1>مرحبًا بكم في موقع <span>Dropy</span>drop!</h1>
-                         </div>
-                         <h5>اسمي <h3>غادة <span>عبدالله</span></h3></h5>
-                         <p>مرحبًا بكم في مساحتي عبر الإنترنت حيث أشارك تجاربي، وأعرض أعمالي، وأقدم خدماتي في تطوير الويب وتطبيقات الهواتف المحمولة. سواء كنت تبحث عن مطور لتحقيق رؤيتك الرقمية أو كنت فضوليًا بشأن عملي، يسعدني وجودك هنا. لا تتردد في تصفح مشاريعي والتواصل للحصول على استشارة مجانية أو لمناقشة مشروعك القادم. استمتع بزيارتك لموقعي!</p>
-                     </div>
-                     <div class="container-imges">
-                         <img src="image/Finance-bro2.png" alt="شكل الخلفية" class="shape">
-                         <img src="icons/weblogo2.svg" alt="شعار الموقع" class="pct">
-                     </div>
-                 </div>
-             </section>
             
+            <div class="swiper">
+  <div class="swiper-wrapper">
+
+    <!-- شريحة 1: من أنا -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">من أنا؟</h3>
+        <p>أنا غادة عبدالله، مطورة ومصممة ويب أُتقن بناء وتصميم مواقع عصرية وسريعة باستخدام PHP & Mysql. أعمل على تقديم تجربة رقمية احترافية تلائم كل العملاء.</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+          <a href="contact.html" class="btn-contact">ابدأ مشروعك</a>
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn color:#2196F3">
+        <img src="image/aboutme.svg" alt="من أنا">
+      </div>
+    </div>
+     <!-- العروض -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">****عروض موقع Dropydrop</h3>
+        <p>فقط للعشرة الأوائل يحصل على خصومات تصل إلى 15%  بالإضافة إلى استظافة مجانية لموقعك لمدة سنة فقط على موقع Dropydrop</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+         <a href="contact.html" class="btn-contact">كن أنت الأول</a>
+
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/comp-gift.svg" alt="عروض">
+      </div>
+    </div>
+<!-- OUR SERVICES -->
+ 
+ <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">خدماتنا</h3>
+        <!-- <p>تصميم مواقع متجاوبة، أنيقة، وسهلة التصفح باستخدام HTML/CSS وJavaScript، مع التركيز على تحسين تجربة المستخدم.</p> -->
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+          <a href="contact.html" class="btn-contact">فقط أبدأ..</a>
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/services.svg" alt="تصميم مواقع">
+      </div>
+    </div>
+
+    <!-- شريحة 2: تصميم مواقع -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">تصميم مواقع ويب</h3>
+        <p>تصميم مواقع متجاوبة، أنيقة، وسهلة التصفح باستخدام HTML/CSS وJavaScript، مع التركيز على تحسين تجربة المستخدم.</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+          <a href="contact.html" class="btn-contact">ابدأ مشروعك</a>
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/develop.svg" alt="تصميم مواقع">
+      </div>
+    </div>
+
+    <!-- شريحة 3: تطوير Laravel -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">تطوير PHP / Mysql</h3>
+        <p>أبني مواقع ديناميكية قوية باستخدام Mysql وPHP، مع لوحات تحكم مخصصة وقواعد بيانات MySQL لتلبية كل المتطلبات.</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+          <a href="https://wa.me/967776781947" target="_blank" class="btn-contact">طلب تطوير خاص</a>
+
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/control_panel.svg" alt="PHP7 & MySQL">
+      </div>
+    </div>
+
+    <!-- شريحة 4: صفحات الهبوط -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">تصميم صفحات هبوط</h3>
+        <p>أصمم صفحات هبوط جذابة وسريعة، تساعدك في جذب العملاء وتحقيق أهدافك التسويقية بفعالية.</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+          <a href="contact.html" class="btn-contact">صفحة هبوط مخصصة</a>
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/landing.svg" alt="صفحات هبوط">
+      </div>
+    </div>
+
+    <!-- شريحة 5: تحسين SEO -->
+    <div class="swiper-slide">
+      <div class="slide-content animate__animated animate__fadeInUp">
+        <h3 class="text-center">تحسين محركات البحث (SEO)</h3>
+        <p>تحسين ظهور موقعك في نتائج البحث عبر تحسين السرعة، الهيكلة، والروابط الداخلية، لضمان أفضل أداء على Google.</p>
+        <div class="buttons animate__animated animate__zoomIn animate__delay-1s">
+         <a href="mailto:ghadaha696@gmail.com" class="btn-contact">تحليل SEO الآن</a>
+
+        </div>
+      </div>
+      <div class="slide-image animate__animated animate__fadeIn">
+        <img src="image/SEO2.svg" alt="تحسين SEO">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+            
+                <!-- عناصر التحكم -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </section>
              <!-- قسم عني -->
              <section class="about section-two">
                  <div class="container-imges">
@@ -43,8 +150,9 @@
                  <div class="container-texts">
                      <h1>عنّـي</h1>
                         <h5><span>مطور برامج</span> متكامل</h5>
+                        <p>Full Stack Developer</p>
                      <p>
-                        السلام عليكم! أنا غادة عبدالله، مؤسسة Dropy<span>drop</span>، ومطورة مواقع الويب وتطبيقات الهواتف المحمولة. لدي شغف عميق بالتكنولوجيا ووتطوير البرمجيات.....
+                        السلام عليكم! أنا غادة عبدالله، مؤسسة Dropy<span>drop</span>، ومطورة مواقع وتطبيقات الويب. لدي شغف عميق بالتكنولوجيا ووتطوير البرمجيات.....
                         <a href="about.html" class="btn3">تعرف أكثر</a></p>
                  </div>
              </section> 
@@ -52,8 +160,8 @@
              <!-- قسم خدماتنا -->
              <section class="about section-three">
                  <div class="container-texts">
-                     <h1>خدماتنا </h1>
-                     <p>تتخصص  <span>Dropy</span>drop في تطوير تطبيقات الهواتف المحمولة عبر الأنظمة باستخدام Dart وإطار عمل Flutter، كما نقدم خدمات تطوير الويب باستخدام HTML و CSS و JavaScript و PHP و MySQL...<a href="services.html" class="btn2">تعرف أكثر</a></p>
+                     <h1>خدماتي </h1>
+                     <p>تتخصص  <span>Dropy</span>drop في تصميم وتطوير تطبيقات الويب باستخدام HTML, CSS,  JavaScript, PHP وتقنية MySQL لمزيد من المعلومات زر صفحة خدماتنا او قدم طلبك فوراً من <a href="services.html" class="btn2">هنا</a>  وزر صفحة الاتصال لملء نموذج الاتصال واختر خدمتك ...<a href="services.html" class="btn2">أطلب الآن</a></p>
                  </div>
                  <div class="container-imges">
                      <img src="image/Devices-cuate.png" alt="خدماتنا">
@@ -61,6 +169,7 @@
              </section>
          
              <!-- قسم مشاريعي -->
+              
              <section class="projects section-four">
                  <h1 class="text-center"><span>مشاريعي</span></h1>
                  <div class="box">
@@ -68,23 +177,17 @@
                          <img class="proj-icn" src="icons/weblogo.svg" alt="موقع Dropy<span>drop</span>">
                          <h5>Dropy<span>drop</span></h5>
                          <div class="par">
-                             <p>موقع شخصي يعرض خدمات تطوير الويب وتطبيقات الهواتف المحمولة....<a href="#" class="btn2">تعرف أكثر</a></p>
+                             <p>موقع شخصي يعرض خدمات تطوير مواقع وتطبيقات الويب ....<a href="projects.html" class="btn2">تعرف أكثر</a></p>
                          </div>
                      </div>
                      <div class="card">
                          <img class="proj-icn2" src="image/logo2color.png" alt="موقع شركة افتراضية">
                          <h5>ُElectronic <span>Worlds</span></h5>
                          <div class="par">
-                             <p>موقع يعرض المنتجات والمعلومات مع لوحة تحكم ودعم كامل للغتين العربية والإنجليزية....<a href="#" class="btn2">تعرف أكثر</a></p>
+                             <p>موقع يعرض المنتجات والمعلومات مع لوحة تحكم ودعم كامل للغتين العربية والإنجليزية....<a href="projects.html" class="btn2">تعرف أكثر</a></p>
                          </div>
                      </div>
-                     <div class="card">
-                         <img class="proj-icn" src="image/ic_launcher.png" alt="تطبيق الكتاب">
-                         <h5>تطبيق على خطى الحبيب</h5>
-                         <div class="par">
-                             <p>تطبيق يحتوي على قصة كاملة مع قائمة عناوين وخيارات تغيير حجم الخط لسهولة القراءة....<a href="#" class="btn2">تعرف أكثر</a></p>
-                         </div>
-                     </div>
+                
                  </div>
              </section> 
          
@@ -109,8 +212,11 @@
              </section>
          
              <footer></footer>
+             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
              <script src="javascript/script.js" defer></script>
              <script src="javascript/functions.js" defer></script>
+             <script src="javascript/main.js" defer></script>
          </body>
          </html>
          <!-- ********************************************************* -->
