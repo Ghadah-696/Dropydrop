@@ -1065,6 +1065,28 @@ footer  .bgf .footicn .content .container-texts{
 .text-contact h1{
     padding-top: -4rem;
 }
+.about-page .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-page .col-md-6 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-page img {
+  max-width: 100%;
+  height: auto;
+}
+.align-center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .my-5 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
@@ -1507,7 +1529,13 @@ footer  .bgf .footicn .content .container-texts{
     margin-top: -1.5rem;
     /* padding-top: -6em; */
 }
+/* --------------------------------------------------------------------------------
+    -----------------------------contact.html
+    ------------------------------------------------------------------------------------- */
 
+.img-fluid{
+    display: none;
+}
 
 /*-------------------------------------------------------------------
   ---------- MEDIA QUERIES(alwayes writing in the end css) IN MIN WIDTH
@@ -1716,7 +1744,13 @@ footer  .bgf .footicn .content .container-texts{
     padding: 5em;
 }
 
- 
+/* --------------------------------------------------------------------------------
+    -----------------------------contact.html
+    ------------------------------------------------------------------------------------- */
+
+.img-fluid{
+    display: none;
+} 
 }
    
 
