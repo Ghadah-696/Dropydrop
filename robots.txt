@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ghadah-696.github.io/Dropydrop/sitemap.xml
