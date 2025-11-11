@@ -879,6 +879,7 @@ footer  .bgf .footicn .content .container-texts{
 }
 .btn1:hover{
     background-color:var(--webbg) ;
+    color: var(--prim);
     border: 2px solid var(--prim);
     transition: .4s;
 }
