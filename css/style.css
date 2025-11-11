@@ -1330,7 +1330,8 @@ footer  .bgf .footicn .content .container-texts{
         padding-top: 0; 
         background: var(--webbg);
         border-bottom: 1px solid var(--sections);        
-        /* display: flex; */
+        display: flex; 
+    justify-content: space-between;
         z-index: 100;
         
     }
@@ -1622,10 +1623,16 @@ footer  .bgf .footicn .content .container-texts{
         padding-top: 0; 
         background: var(--webbg);
         border-bottom: 1px solid var(--sections);        
-        /* display: flex; */
         z-index: 100;
-        
+        display: flex;
+    justify-content: space-between; 
     }
+
+#menu {
+    display: block ;
+    /* هذه ممتازة وتضمن أن الزر يظهر على اليسار مع مسافة داخلية */
+    padding-left: 10px; 
+}
     nav h2 {
         display:block ;
         /* align-items: center; */
