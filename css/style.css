@@ -1210,6 +1210,36 @@ footer  .bgf .footicn .content .container-texts{
             padding-bottom: 20px;
             overflow: hidden; 
         }
+/* تنسيق البطاقات (Cards) في قسم المشاريع */
+.projects-grid {
+    display: grid;
+    /* 💥 تقسيم الشبكة إلى 3 أعمدة متساوية في الشاشات الكبيرة */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* المسافة بين البطاقات */
+    padding: var(--padding);
+    margin: 40px auto; /* توسيط الحاوية */
+    max-width: 1200px; /* تحديد أقصى عرض للشبكة */
+}
+
+/* تنسيق البطاقة الواحدة (Card) */
+.project_pg {
+    background-color: var(--card-bg); /* لون خلفية البطاقة */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project_pg:hover {
+    transform: translateY(-5px); /* تأثير رفع البطاقة عند التحويم */
+}
+
+.project_pg .proj-icn {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
         /* ----------------------------------------------------
 ----------------swiper-slider
 --------------------------------------------------------*/
@@ -1462,6 +1492,10 @@ footer  .bgf .footicn .content .container-texts{
     }
     .project_pg{
         width: 500px;
+    }
+       .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     /* -------------------------------------------------------
     ---------------Skills Section
@@ -1785,6 +1819,10 @@ footer  .bgf .footicn .content .container-texts{
     .projects .box {
         display: flex ;
         justify-content: center;
+    }
+       .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     /* -------------------------------------------------------
     ---------------Skills Section
