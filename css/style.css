@@ -56,9 +56,10 @@ span{
 h1{
     font-size: 4rem;
     margin: 1.2rem 0;
-
-    background: linear-gradient(to right, #4CAF50, #2196F3);
+background: linear-gradient(to right, var(--sections), var(--text2)); /* برتقالي إلى أزرق ملكي */
     -webkit-background-clip: text;
+    /* background: linear-gradient(to right, #4CAF50, #2196F3);
+    -webkit-background-clip: text; */
     color: transparent;
     /* font-size: 2em; */
     font-weight: bold;
@@ -995,6 +996,14 @@ footer  .bgf .footicn .content .container-texts{
         background-color: var(--text2);
         color: var(--lightColor);
     }
+.services .card{
+    width: 400px;
+    background-color: var(--webbg); /* استخدام خلفية الموقع لتباين خفيف */
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* إضافة ظل لتمييز الكارت */
+}
     .contact-form {
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1548,7 +1557,25 @@ footer  .bgf .footicn .content .container-texts{
 .img-fluid{
     display: none;
 }
-
+.section-two, .section-four {
+    /* تغيير الخلفية من الأخضر إلى اللون الأزرق الداكن الأساسي */
+    background-color: var(--prim);
+    padding: 20px;
+    color: var(--lightColor); /* تأكد من أن النص أبيض على هذه الخلفية */
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--sections); /* اللون البرتقالي عند التحويم */
+    border: 2px solid var(--sections);
+    transition: .4s;
+}
+.skills{
+    background-color: var(--webbg); /* خلفية بيضاء فاتحة */
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /*-------------------------------------------------------------------
   ---------- MEDIA QUERIES(alwayes writing in the end css) IN MIN WIDTH
    ------------------------------------------------------------------*/
