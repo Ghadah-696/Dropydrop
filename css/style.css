@@ -394,10 +394,17 @@ footer .footicn .container-imges  img {
 }
 
 /* ⚙️ إضافة هذا الكود لضمان أن Swiper يتحكم في عرض الشريحة */
+.projectsSwiper  {
+    overflow: hidden;
+}
 .projectsSwiper .swiper-slide {
-    width: auto !important; 
+    width: auto !important; /* إلغاء أي عرض خارجي */
     box-sizing: border-box; 
-    display: flex;
+    
+    /* 💥 هذا يمنع البطاقة من الانكماش والتكدس فوق غيرها */
+    flex-shrink: 0 !important; 
+    
+    display: flex; /* يُساعد في توسيط المحتوى داخل الشريحة */
     justify-content: center;
 }
 /*-------------------------------------------------------------------
