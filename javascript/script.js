@@ -59,33 +59,39 @@ if (span) {
         modal.style.display = "none";
     };
 }
+// -----------------------------------------------
 // -----------------------------------------------------------------------------
 // تهيئة سلايدر المشاريع (Projects Swiper)
 var projectsSwiper = new Swiper(".projectsSwiper", {
     // تشغيل التحريك الأوتوماتيكي
     autoplay: {
-        delay: 4500, 
+        delay: 4500, // 4.5 ثانية
         disableOnInteraction: false, 
     },
-    loop: true, 
-    spaceBetween: 30, 
+    loop: true, // التمرير المستمر
+    spaceBetween: 30, // المسافة بين البطاقات
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     // تحديد عدد البطاقات الظاهرة حسب حجم الشاشة
     breakpoints: {
-        // للهواتف الصغيرة
+        // للهواتف الصغيرة (عرض 576px وأقل)
         0: {
-            slidesPerView: 1,
+            slidesPerView: 1, // عرض بطاقة واحدة
         },
-        // للتابلت
+        // للتابلت (عرض من 768px فما فوق)
         768: {
-            slidesPerView: 2, 
+            slidesPerView: 2, // عرض بطاقتين
         },
-        // للشاشات الكبيرة
+        // للشاشات الكبيرة (عرض من 1024px فما فوق)
         1024: {
-            slidesPerView: 3,
+            slidesPerView: 3, // عرض ثلاث بطاقات
         },
+    },
+    // إضافة الأسهم للتحكم اليدوي
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
