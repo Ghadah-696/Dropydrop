@@ -32,8 +32,8 @@ function includeHTML() {
         }
     }
   }
-    xhr.open("GET", "includes/head.html", true);
-    xhr.send();
+    // xhr.open("GET", "includes/head.html", true);
+    // xhr.send();
   }
   
   document.addEventListener("DOMContentLoaded", function() {
