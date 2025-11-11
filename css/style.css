@@ -3,13 +3,17 @@
   
     
    
-    --prim: #1A237E; /* أزرق نيلي داكن (للعناوين والتأثير القوي) */
-    
+    --prim: #004D40; /* أخضر داكن زمردي (للعناوين والتأثير القوي) */
     /* الأزرار والعناصر التفاعلية */
     --lightColor:#ffffff;
-    --sections: #FF9800; /* برتقالي ساطع (للأزرار والعناصر الجاذبة) */
-    --webbg: #F0F8FF; /* خلفية الويب الرئيسية (أبيض مزرق فاتح) */
-    --text2: #0D47A1;
+    --sections: #A5D6A7; /* أخضر باهت هادئ (للأزرار والعناصر الجاذبة) */
+    --webbg: #ECEFF1; /* خلفية الويب الرئيسية (رمادي فاتح مريح) */
+    --text2: #263238; /* رمادي داكن (للنصوص الأساسية) */
+    
+    /* تدرج شريط التنقل */
+    /* نستخدم الألوان الهادئة المائلة للأزرق/الأخضر */
+    --navbg: linear-gradient(to right, var(--prim), #4DD0E1); /* أخضر داكن إلى أزرق سماوي هادئ */
+    --navbg-media: linear-gradient(to bottom, var(--prim), #4DD0E1);
     
     
    /* الأزرار والعناصر التفاعلية 
@@ -20,10 +24,7 @@
     --text2:#0D47A1;
     --navbg:linear-gradient(to right, var(--sections), #2196F3);
     --navbg-media:linear-gradient(to bottom, var(--sections), #2196F3); */
-  /* تدرج شريط التنقل */
-    --navbg: linear-gradient(to right, var(--prim), #0D47A1); /* تدرج أزرق داكن */
-    --navbg-media: linear-gradient(to bottom, var(--prim), #0D47A1); /* تدرج القائمة الجانبية */
-
+ 
     --padding: 8%;
    
      direction: rtl;
