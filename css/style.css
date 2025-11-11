@@ -487,7 +487,7 @@ footer .footicn .container-imges  img {
     width: 40%;
 }
 .section-one, .section-three, .section-five {
-    background-color: #E3F2FD; /* أزرق فاتح */
+     background-color: var(--sections);
     padding: 20px;
   }
   
