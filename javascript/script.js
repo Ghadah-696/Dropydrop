@@ -60,38 +60,29 @@ if (span) {
     };
 }
 // -----------------------------------------------
-// -----------------------------------------------------------------------------
 // تهيئة سلايدر المشاريع (Projects Swiper)
-var projectsSwiper = new Swiper(".projectsSwiper", {
-    // تشغيل التحريك الأوتوماتيكي
-    autoplay: {
-        delay: 4500, // 4.5 ثانية
-        disableOnInteraction: false, 
-    },
-    loop: true, // التمرير المستمر
-    spaceBetween: 30, // المسافة بين البطاقات
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    // تحديد عدد البطاقات الظاهرة حسب حجم الشاشة
-    breakpoints: {
-        // للهواتف الصغيرة (عرض 576px وأقل)
-        0: {
-            slidesPerView: 1, // عرض بطاقة واحدة
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // تأكدي من أن هذا هو الكود الصحيح لسلايدر المشاريع
+    var projectsSwiper = new Swiper(".projectsSwiper", {
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false, 
         },
-        // للتابلت (عرض من 768px فما فوق)
-        768: {
-            slidesPerView: 2, // عرض بطاقتين
+        loop: true, 
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        // للشاشات الكبيرة (عرض من 1024px فما فوق)
-        1024: {
-            slidesPerView: 3, // عرض ثلاث بطاقات
+        breakpoints: {
+            0: { slidesPerView: 1, },
+            768: { slidesPerView: 2, },
+            1024: { slidesPerView: 3, },
         },
-    },
-    // إضافة الأسهم للتحكم اليدوي
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+// -----------------------------------------------------------------------------
