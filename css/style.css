@@ -851,6 +851,7 @@ footer  .bgf .footicn .content .container-texts{
     border: 2px solid transparent;
     text-decoration: none;
     transition: .4s;
+    width:100%;
 }
 .btn1:hover{
     background-color:var(--webbg) transparent;
