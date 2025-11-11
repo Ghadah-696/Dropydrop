@@ -438,14 +438,20 @@ footer .footicn .container-imges  img {
     transition: .4s;
 }
    .projects .card{
-    background-color: var(--webbg); 
+   max-width: 400px; /* 💡 يضمن عدم تمدد البطاقة لأكثر من 400 بكسل */
+    width: 100%; /* 💡 يضمن أن البطاقة تستجيب وتأخذ عرض الشريحة بالكامل */
+    
+    background-color: var(--sections);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
 }
-.projects .box{
+/* .projects .box{
     display: flex; 
     justify-content: space-between;
     text-align: center;
     margin: 2rem;
-}
+} */
 
 /*-------------------------------------------------------------------
   ---------- Skills Section
