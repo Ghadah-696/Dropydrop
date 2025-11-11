@@ -140,6 +140,7 @@ nav h2{
  nav ul li a:hover{
     font-size: 1.3rem;
     color: var(--prim);
+     transition: .5s; 
     
  }
  nav ul li a:active{
@@ -841,6 +842,22 @@ footer  .bgf .footicn .content .container-texts{
     text-decoration: none;
     transition: .4s;
 }
+.btn1{
+    background-color: var(--prim); /* أخضر زمردي داكن */
+    color: var(--lightColor);
+    font-weight: bold;
+    padding: 0.8rem 1.87rem;
+    border-radius: 35px ;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: .4s;
+}
+.btn1:hover{
+    background-color:var(--webbg) transparent;
+    color: var(--prim); /* استخدام اللون الأساسي الداكن عند التحويم */
+    border: 2px solid var(--prim);
+    transition: .4s;
+}
 /* 5. تعديل لون خط الأزرار عند التحويم */
 .btn:hover{
     background-color: transparent;
@@ -1335,6 +1352,29 @@ footer  .bgf .footicn .content .container-texts{
         z-index: 100;
         
     }
+    .collapse.navbar-collapse {
+        display: none; /* القائمة مخفية في وضع الهاتف والتابلت */
+        flex-direction: column; 
+        align-items: flex-start;
+        position: absolute; 
+        top: 82px; /* افترضنا أن ارتفاع الـ nav هو 82px */
+        left: 0;
+        width: 100%;
+        background: var(--navbg-media);
+        z-index: 1000;
+        padding: 15px var(--padding);
+    }
+    
+    /* 3. جعل القائمة مرئية عند النقر (باستخدام JS) */
+    .collapse.navbar-collapse.is-active {
+        display: flex; 
+    }
+
+    /* 4. تنسيق العناصر الأخرى في وضع الهاتف */
+    header nav .bf-foot-social .social {
+        display: flex; /* إظهار أيقونات التواصل في القائمة المنسدلة */
+        /* ... */
+    }
     nav h2 {
         display:block ;
         /* align-items: center; */
@@ -1633,6 +1673,29 @@ footer  .bgf .footicn .content .container-texts{
     /* هذه ممتازة وتضمن أن الزر يظهر على اليسار مع مسافة داخلية */
     padding-left: 10px; 
 }
+.collapse.navbar-collapse {
+        display: none; /* القائمة مخفية في وضع الهاتف والتابلت */
+        flex-direction: column; 
+        align-items: flex-start;
+        position: absolute; 
+        top: 82px; /* افترضنا أن ارتفاع الـ nav هو 82px */
+        left: 0;
+        width: 100%;
+        background: var(--navbg-media);
+        z-index: 1000;
+        padding: 15px var(--padding);
+    }
+    
+    /* 3. جعل القائمة مرئية عند النقر (باستخدام JS) */
+    .collapse.navbar-collapse.is-active {
+        display: flex; 
+    }
+
+    /* 4. تنسيق العناصر الأخرى في وضع الهاتف */
+    header nav .bf-foot-social .social {
+        display: flex; /* إظهار أيقونات التواصل في القائمة المنسدلة */
+        /* ... */
+    }
     nav h2 {
         display:block ;
         /* align-items: center; */
