@@ -487,13 +487,13 @@ footer .footicn .container-imges  img {
     width: 40%;
 }
 .section-one, .section-three, .section-five {
-     background-color: var(--sections);
+    background-color: var(--webbg); /* أزرق فاتح */
     padding: 20px;
   }
   
   .section-two, .section-four {
     /* خلفية هذه الأقسام ستكون بلون هادئ ومريح */
-    background-color: #CFD8DC; /* رمادي مزرق فاتح جداً */
+    background-color: var(--sections); /* رمادي مزرق فاتح جداً */
     padding: 20px;
   }
   .box{
