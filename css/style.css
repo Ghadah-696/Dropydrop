@@ -9,7 +9,6 @@
     --sections: #A5D6A7; /* أخضر باهت هادئ (للأزرار والعناصر الجاذبة) */
     --webbg: #ECEFF1; /* خلفية الويب الرئيسية (رمادي فاتح مريح) */
     --text2: #263238; /* رمادي داكن (للنصوص الأساسية) */
-  
     
     /* تدرج شريط التنقل */
     /* نستخدم الألوان الهادئة المائلة للأزرق/الأخضر */
@@ -487,15 +486,11 @@ footer .footicn .container-imges  img {
     width: 40%;
 }
 .section-one, .section-three, .section-five {
-    background-color: var(--webbg);
+    background-color: var(--webbg); /* أزرق فاتح */
     padding: 20px;
   }
   
-  .section-two, .section-four {
-    /* خلفية هذه الأقسام ستكون بلون هادئ ومريح */
-    background-color: var(--sections); /*أخظر هادئ */
-    padding: 20px;
-  }
+ 
   .box{
     display: flex;
   }
@@ -1575,12 +1570,13 @@ footer  .bgf .footicn .content .container-texts{
 .img-fluid{
     display: none;
 }
-.section-two, .section-four {
-    /* تغيير الخلفية من الأخضر إلى اللون الأزرق الداكن الأساسي */
-     background-color: var(--webbg);
+
+ .section-two, .section-four {
+    /* خلفية هذه الأقسام ستكون بلون هادئ ومريح */
+    background-color: var(--sections); /* رمادي مزرق فاتح جداً */
     padding: 20px;
-    color: var(--lightColor); /* تأكد من أن النص أبيض على هذه الخلفية */
-}
+    color: var(--lightColor);
+  }
 .btn:hover{
     background-color: transparent;
     color: var(--sections); /* اللون البرتقالي عند التحويم */
