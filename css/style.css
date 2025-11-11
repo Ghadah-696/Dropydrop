@@ -57,13 +57,13 @@ span{
 h1{
     font-size: 4rem;
     margin: 1.2rem 0;
-background: linear-gradient(to right, var(--sections), var(--text2)); /* برتقالي إلى أزرق ملكي */
+
+    /* تدرج من لون الأقسام الهادئ إلى اللون الأساسي الداكن */
+    background: linear-gradient(to right, var(--sections), var(--prim)); 
     -webkit-background-clip: text;
-    /* background: linear-gradient(to right, #4CAF50, #2196F3);
-    -webkit-background-clip: text; */
     color: transparent;
-    /* font-size: 2em; */
     font-weight: bold;
+    
 }
 header{
     display: flow-root;
@@ -491,9 +491,8 @@ footer .footicn .container-imges  img {
   }
   
   .section-two, .section-four {
-    background-color:#8BC34A;
-     /* var(--links); */
-    /*background-color: #4CAF50;  أخضر زاهي */
+    /* خلفية هذه الأقسام ستكون بلون هادئ ومريح */
+    background-color: #CFD8DC; /* رمادي مزرق فاتح جداً */
     padding: 20px;
   }
   .box{
@@ -840,6 +839,23 @@ footer  .bgf .footicn .content .container-texts{
         text-decoration: none;
         
     }
+    .btn{
+    background-color: var(--prim); /* أخضر زمردي داكن */
+    color: var(--lightColor);
+    font-weight: bold;
+    padding: 0.8rem 1.87rem;
+    border-radius: 35px ;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: .4s;
+}
+/* 5. تعديل لون خط الأزرار عند التحويم */
+.btn:hover{
+    background-color: transparent;
+    color: var(--prim); /* استخدام اللون الأساسي الداكن عند التحويم */
+    border: 2px solid var(--prim);
+    transition: .4s;
+}
     .about-page p{
         color: black; 
         margin-left: 2rem;
@@ -1793,4 +1809,3 @@ footer  .bgf .footicn .content .container-texts{
 } 
 }
    
-
