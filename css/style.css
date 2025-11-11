@@ -845,17 +845,9 @@ footer  .bgf .footicn .content .container-texts{
 .btn1{
     background-color: var(--prim); /* أخضر زمردي داكن */
     color: var(--lightColor);
-    font-weight: bold;
-    padding: 0.8rem 1.87rem;
-    border-radius: 35px ;
-    border: 2px solid transparent;
-    text-decoration: none;
-    transition: .4s;
-    width:100%;
 }
 .btn1:hover{
     background-color:var(--webbg) transparent;
-    color: var(--prim); /* استخدام اللون الأساسي الداكن عند التحويم */
     border: 2px solid var(--prim);
     transition: .4s;
 }
