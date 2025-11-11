@@ -59,3 +59,33 @@ if (span) {
         modal.style.display = "none";
     };
 }
+// -----------------------------------------------------------------------------
+// تهيئة سلايدر المشاريع (Projects Swiper)
+var projectsSwiper = new Swiper(".projectsSwiper", {
+    // تشغيل التحريك الأوتوماتيكي
+    autoplay: {
+        delay: 4500, 
+        disableOnInteraction: false, 
+    },
+    loop: true, 
+    spaceBetween: 30, 
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // تحديد عدد البطاقات الظاهرة حسب حجم الشاشة
+    breakpoints: {
+        // للهواتف الصغيرة
+        0: {
+            slidesPerView: 1,
+        },
+        // للتابلت
+        768: {
+            slidesPerView: 2, 
+        },
+        // للشاشات الكبيرة
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
