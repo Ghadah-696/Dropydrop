@@ -397,7 +397,7 @@ footer .footicn .container-imges  img {
 .projectsSwiper  {
     overflow: hidden;
 }
-.projectsSwiper .swiper-slide {
+/* .projectsSwiper .swiper-slide {
     width: auto !important; /* إلغاء أي عرض خارجي */
     box-sizing: border-box; 
     
@@ -406,7 +406,7 @@ footer .footicn .container-imges  img {
     
     display: flex; /* يُساعد في توسيط المحتوى داخل الشريحة */
     justify-content: center;
-}
+} */
 /*-------------------------------------------------------------------
   ---------- Projects section
    ------------------------------------------------------------------*/
@@ -438,16 +438,31 @@ footer .footicn .container-imges  img {
     transition: .4s;
 }
    .projects .card{
-   max-width: 400px; /* 💡 يضمن عدم تمدد البطاقة لأكثر من 400 بكسل */
-    width: 100%; /* 💡 يضمن أن البطاقة تستجيب وتأخذ عرض الشريحة بالكامل */
+   /* max-width: 400px; /* 💡 يضمن عدم تمدد البطاقة لأكثر من 400 بكسل */
+    /* width: 100%; */
+       /* 💡 يضمن أن البطاقة تستجيب وتأخذ عرض الشريحة بالكامل */ 
     
     background-color: var(--sections);
     border-radius: 20px;
     padding: 1.3rem 2rem;
     text-align: center;
 }
+.projectsSwiper {
+    width: 100%; /* يجب أن تأخذ العرض الكامل لمنطقة العرض المتاحة لها */
+    height: auto;
+    overflow: hidden; 
+}
+
+.projectsSwiper .swiper-slide {
+    width: auto !important; 
+    box-sizing: border-box; 
+    flex-shrink: 0 !important; /* الأكثر أهمية لحل مشكلة التكدس */
+    
+    display: flex; 
+    justify-content: center;
+}
 .projects .box{
-    display: block; 
+    /* display: block;  */
     justify-content: space-between;
     text-align: center;
     margin: 2rem;
