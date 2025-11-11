@@ -446,12 +446,12 @@ footer .footicn .container-imges  img {
     padding: 1.3rem 2rem;
     text-align: center;
 }
-/* .projects .box{
-    display: flex; 
+.projects .box{
+    display: block; 
     justify-content: space-between;
     text-align: center;
     margin: 2rem;
-} */
+}
 
 /*-------------------------------------------------------------------
   ---------- Skills Section
