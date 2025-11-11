@@ -65,4 +65,4 @@
         .catch(error => {
             console.error('Error fetching footer:', error);
         });
-});
+
