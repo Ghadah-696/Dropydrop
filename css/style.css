@@ -477,6 +477,74 @@ footer .footicn .container-imges  img {
     text-align: center;
     margin: 2rem;
 }
+/* 1. الحاوية الخارجية: تضمن أن المحتوى الزائد يختفي */
+.projects-scroll-container {
+    overflow-x: auto; /* 💥 الأهم: يضيف شريط تمرير أفقي عند الحاجة */
+    overflow-y: hidden; /* يمنع ظهور شريط التمرير العمودي */
+    white-space: nowrap; 
+    /* يمنع البطاقات من النزول لسطر جديد */
+    padding-bottom: 20px; /* مساحة لشريط التمرير ليظهر بوضوح */
+    padding-right: var(--padding);
+    padding-left: var(--padding);
+}
+/* 1. تنسيق حاوية التمرير الأفقي */
+.projects-scroll-container {
+    overflow-x: auto; 
+    overflow-y: hidden;
+    /* 💥 هذه الخاصية ضرورية لمنع البطاقات من النزول لسطر جديد */
+    /* ولكنها لا يجب أن تؤثر على النصوص الداخلية */
+    white-space: nowrap; 
+    padding-bottom: 20px; 
+    padding-right: var(--padding);
+    padding-left: var(--padding);
+}
+
+/* 2. البطاقة الواحدة: العرض والتجاوب */
+.card {
+    flex-shrink: 0; 
+    width: 300px; /* 💡 تأكد من أن هذا العرض كافٍ للنص، أو قم بزيادته */
+    max-width: 100%;
+    
+    /* 💥 التصحيح: يجب أن يكون النص داخل البطاقة مرنًا */
+    white-space: normal; /* السماح للنص بالنزول لسطر جديد */
+    word-wrap: break-word; /* يضمن انقسام الكلمات الطويلة جداً */
+    
+    /* ... باقي تنسيقات البطاقة ... */
+    background-color: var(--sections);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
+
+/* 3. حاوية النص الداخلي */
+.card .par p {
+    /* 💥 التصحيح: تأكد من أن النص الداخلي يسمح بالكسر */
+    white-space: normal; 
+    word-wrap: break-word;
+}
+
+/* 2. الحاوية الداخلية: ترتيب البطاقات جنباً إلى جنب */
+.projects-scroll-wrapper {
+    display: flex;
+    gap: 30px; /* المسافة بين البطاقات */
+    
+    /* 💥 هذا يمنع أي كود قديم من التدخل */
+    width: fit-content; 
+}
+
+/* 3. البطاقة الواحدة: تحديد حجم ثابت للبطاقة */
+.project-card {
+    /* 💥 يجب أن يكون لها عرض ثابت الآن */
+    flex-shrink: 0; /* يمنع انكماش البطاقة */
+    width: 300px; /* 💡 يمكنك تعديل عرض البطاقة هنا */
+    max-width: 100%;
+    
+    /* ... باقي التنسيقات الجمالية للبطاقة ... */
+    background-color: var(--sections);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
 
 /*-------------------------------------------------------------------
   ---------- Skills Section
@@ -1188,109 +1256,217 @@ footer  .bgf .footicn .content .container-texts{
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
 }
-/* ----------------------------------------------
---------------project.html(2)
------------------------------------------------- */
- .proj{
-         margin: 0;
-        background: var(--webbg);
-        padding:  var(--padding);
-    }
-    
-    .container_proj {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header_proj {
-            /* background-color: #333; */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .header_proj h1 {
-            margin: 0;
-        }
-        
-        .projects_pg {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-        .project_pg {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            padding: 20px;
-            width: 40%;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .project_pg:hover {
-            transform: scale(1.05);
-        }
-        .project_pg img {
-            width: 80px;
-            height: 80px;
-            /* border-radius: 50%; */
-        }
-        .project_pg h2 {
-            margin-top: 10px;
-            color: var(--sections);
-        }
-        .project_pg h3{
-            color: var(--prim);
-        }
-        .project_pg ul li{
-            color: var(--sections);
-        }
-        .project_pg p {
-            color: var(--prim);
-        }
-        .project_pg a {
-            color: #008cba;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-        }
-        .swiper-container {
-            width: 100%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            overflow: hidden; 
-        }
-/* تنسيق البطاقات (Cards) في قسم المشاريع */
-.projects-grid {
+.projects_pg {
     display: grid;
-    /* 💥 تقسيم الشبكة إلى 3 أعمدة متساوية في الشاشات الكبيرة */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* المسافة بين البطاقات */
-    padding: var(--padding);
-    margin: 40px auto; /* توسيط الحاوية */
-    max-width: 1200px; /* تحديد أقصى عرض للشبكة */
+    /* 💥 عرض 3 أعمدة في الشاشات الكبيرة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* مسافة أكبر بين البطاقات */
+    margin: 40px 0;
+}
+/* ----------------------------------------------------
+---------------project_pg
+-------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------
+   تنسيق قسم رأس المشاريع (Hero Section)
+------------------------------------------------------------------------------------- */
+
+.projects-hero-section {
+    display: grid;
+    /* تقسيم الشاشة: 2 جزء للنص / 1 جزء للصورة */
+    grid-template-columns: 2fr 1fr; 
+    gap: 50px;
+    padding: 60px 40px; /* حشو داخلي كبير */
+    margin-bottom: 50px; /* مسافة عن بقية المشاريع */
+    background-color: var(--webbg); /* استخدام لون خلفية القسم */
+    border-radius: 15px;
 }
 
-/* تنسيق البطاقة الواحدة (Card) */
-.project_pg {
-    background-color: var(--card-bg); /* لون خلفية البطاقة */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
+.hero-title {
+    font-size: 3rem;
+    color: var(--prim); /* لون أساسي */
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--second); /* خط بسيط تحت العنوان */
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-.project_pg:hover {
-    transform: translateY(-5px); /* تأثير رفع البطاقة عند التحويم */
-}
-
-.project_pg .proj-icn {
-    width: 60px;
-    height: 60px;
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text2);
+    line-height: 1.6;
     margin-bottom: 15px;
 }
+
+.hero-tagline {
+    font-style: italic;
+    color: var(--text);
+    margin-top: 20px;
+}
+
+/* تنسيق الصورة */
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px; /* تحديد أقصى عرض للصورة */
+    height: auto;
+    border-radius: 50%; /* لجعل الصورة دائرية إذا كانت صورة شخصية */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* ---------------------------------------
+-----------end Hero-section */
+/* 1. حاوية عرض المشاريع (Grid) */
+.projects-showcase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* مسافة كبيرة بين الأقسام */
+    padding: 40px var(--padding);
+}
+
+/* 2. القسم الواحد (Project Item) */
+.project-item-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* 1.5 للنص/ 1 للصورة */
+    gap: 50px;
+    padding: 30px;
+    background-color: var(--sections);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    align-items: flex-start; /* محاذاة العناصر من الأعلى */
+}
+
+/* 3. الترتيب المتبادل (صورة على اليمين) */
+.project-item-card.reverse-layout {
+    grid-template-columns: 1fr 1.5fr; /* عكس النسب */
+}
+.project-item-card.reverse-layout .project-gallery-scroll {
+    order: 2; /* وضع معرض الصور في العمود الثاني */
+}
+.project-item-card.reverse-layout .project-details {
+    order: 1; /* وضع التفاصيل في العمود الأول */
+}
+
+/* 4. منطقة التفاصيل (خاصية السهم) */
+.project-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--prim);
+}
+
+.project-accordion {
+    border: 1px solid var(--second);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--webbg);
+}
+
+.project-accordion summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.project-accordion summary::-webkit-details-marker {
+    display: none; /* إخفاء السهم الافتراضي */
+}
+.project-accordion summary .toggle-icon {
+    transition: transform 0.3s;
+}
+.project-accordion[open] summary .toggle-icon {
+    transform: rotate(180deg); /* تدوير السهم عند الفتح */
+}
+/* 1. الحالة الافتراضية (مغلق) */
+.project-accordion .accordion-text::before {
+   /* 💥 نستخدم خاصية display: inline لضمان الوراثة والأبعاد */
+    display: inline;
+    content: "تفاصيل أكثر"; /* النص عندما يكون السهم مغلقاً */
+    padding-left: 8px; /* لتحسين المسافة بين النص والسهم */
+    font-size: 1rem; /* لضمان حجم خط واضح */
+    color: var(--prim); /* لضمان ظهور اللون (استخدمي متغير اللون المناسب لديك) */
+}
+
+/* 2. الحالة عند الفتح */
+.project-accordion[open] .accordion-text::before {
+    content: "تفاصيل أقل"; /* النص عندما يكون السهم مفتوحاً */
+    padding-left: 8px;
+}
+.description-content {
+    padding-top: 15px;
+}
+
+.tech-stack {
+    margin: 15px 0;
+}
+.tech-stack span {
+    display: inline-block;
+    background-color: var(--second);
+    color: var(--prim);
+    padding: 4px 10px;
+    margin: 5px 3px;
+    border-radius: 20px; /* شكل كبسولة */
+    font-size: 0.85rem;
+}
+.tech-title {
+    font-size: 1.2rem;
+    color: var(--text2);
+    margin-top: 15px;
+}
+
+/* 5. معرض الصور الممرر عمودياً */
+.project-gallery-scroll {
+    /* الـ Swiper container يجب أن يكون داخل div للتمرير العمودي */
+    max-height: 450px; /* 💡 ارتفاع ثابت لعرض الصور عمودياً (يمكن تعديله) */
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding-right: 15px;
+    border-radius: 10px;
+    /* إخفاء شريط التمرير الافتراضي في بعض المتصفحات لتحسين الشكل */
+    scrollbar-width: none; /* Firefox */
+}
+.project-gallery-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+
+.project-gallery-scroll .swiper-container {
+    width: 100%;
+    /* لا نحتاج لارتفاع ثابت إضافي هنا، نعتمد على الأب */
+}
+.project-gallery-scroll .swiper-slide {
+    width: 100% !important;
+    margin-bottom: 15px; /* المسافة بين الصور */
+}
+.project-gallery-scroll img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* للإشارة إلى خاصية Lightbox */
+}
+
+.btn-live-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: var(--prim);
+    color: var(--lightColor);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.btn-live-link:hover {
+    background-color: var(--second);
+}
+
         /* ----------------------------------------------------
 ----------------swiper-slider
 --------------------------------------------------------*/
@@ -1541,9 +1717,7 @@ footer  .bgf .footicn .content .container-texts{
         display: flex ;
         justify-content: center;
     }
-    .project_pg{
-        width: 500px;
-    }
+    
        .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1609,45 +1783,80 @@ footer  .bgf .footicn .content .container-texts{
      /* --------------------------------------------------------------------------------
     -----------------------------Project.html
     ------------------------------------------------------------------------------------- */
-    .proj{
-        
-        padding: 5em;
+   /* ----------------------------------------
+   ------------------hero-sectio
+   ----------------------------------------- */
+   .projects-hero-section {
+        /* تحويل التخطيط إلى عمودي في الأجهزة الصغيرة */
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        text-align: center; /* توسيط النصوص */
     }
-    .text-center{
+    
+    .hero-image-container {
+        order: -1; /* وضع الصورة في الأعلى في شاشات الجوال */
+        margin-bottom: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        border-bottom: none; /* إزالة الخط السفلي في الجوال */
+    }
+}
+/* ---------end hero section-------------------- */
+    .proj {
+        padding: 2em; /* تقليل الحشو ليتناسب مع الهاتف */
+    }
+    .text-center {
         padding-top: 4rem;
     }
-    .about-page h1{
-        /* margin-top: -3rem; */
+    .about-page h1 {
         text-align: center;
         padding-top: 5rem;
-           
-    }
-    .projects_pg{
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin: auto;
-       
-    }
-    .container-texts{
-        text-align: center;
-    }
-    .project_pg{
-        width: 300px;
-        border-radius: 20px;
-        padding: 1.3rem 2rem;
-        text-align: center;
     }
     .header_proj {
-
-        padding:  0;
-        
-    }
-    .about-page .proj{
-        padding: 5em;
+        padding: 0;
     }
 
-}
+    /* 💥 تطبيق التنسيق الحديث على الشاشات الصغيرة جداً */
+    .projects_pg { /* هذا الكلاس يمثل .projects-showcase-container في الكود الحديث */
+        gap: 40px; 
+    }
+    
+    .project-item-card,
+    .project-item-card.reverse-layout {
+        /* تحويل التخطيط إلى عمودي */
+        grid-template-columns: 1fr;
+        gap: 20px; 
+        padding: 15px; 
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* ظل أخف */
+    }
+    
+    /* إلغاء الترتيب العكسي */
+    .project-item-card .project-details,
+    .project-item-card .project-gallery-scroll {
+        order: initial;
+    }
+    
+    /* ضبط العناصر الداخلية */
+    .project-details {
+        text-align: center;
+    }
+    .tech-stack {
+        text-align: center;
+    }
+    .project-title {
+        font-size: 1.6rem;
+    }
+    .project-gallery-scroll {
+        max-height: 250px; 
+    }
+    .btn-live-link {
+        width: 100%; 
+        box-sizing: border-box; 
+        text-align: center;
+    }
+
 
  /* --------------------------------------------------------------------------------
     -----------------------------About.html
@@ -1669,12 +1878,12 @@ footer  .bgf .footicn .content .container-texts{
         margin: auto;
        
     }
-    .project_pg{
+    /* .project_pg{
         width: 300px;
         border-radius: 20px;
         padding: 1.3rem 2rem;
         text-align: center;
-    }
+    } */
     .header_proj {
 
         padding:  0;
@@ -1930,7 +2139,7 @@ footer  .bgf .footicn .content .container-texts{
     /* --------------------------------------------------------------------------------
     -----------------------------pages
     ------------------------------------------------------------------------------------- */
-
+    
     /* --------------------------------------------------------------------------------
     -----------------------------services.html
     ------------------------------------------------------------------------------------- */
@@ -1959,4 +2168,50 @@ footer  .bgf .footicn .content .container-texts{
     display: none;
 } 
 }
-   
+  
+ /* --------------------------------------------------------------------------------
+    -----------------------------project.html
+    ------------------------------------------------------------------------------------- */
+
+/* تطبيق التجاوب على كلتا الحالتين الافتراضية والمعكوسة */
+    .project-item-card,
+    .project-item-card.reverse-layout {
+        /* 💥 تحويل التخطيط إلى عمودي في الأجهزة الصغيرة */
+        grid-template-columns: 1fr; 
+        gap: 30px; /* تقليل المسافة العمودية بين التفاصيل والصور */
+        padding: 20px; /* تقليل الحشو حول البطاقة */
+    }
+
+    /* إلغاء الترتيب العكسي ليصبح العرض طبيعياً (تفاصيل ثم صور) */
+    .project-item-card .project-details {
+        order: initial;
+    }
+    .project-item-card .project-gallery-scroll {
+        order: initial;
+    }
+    .project-details {
+        text-align: center; /* توسيط محاذاة النصوص */
+    }
+    
+    /* توسيط التقنيات (Badges) */
+    .tech-stack {
+        text-align: center;
+    }
+    /* جعل العنوان أصغر قليلاً */
+    .project-title {
+        font-size: 1.8rem;
+    }
+    .project-gallery-scroll {
+        /* ارتفاع أقل في الجوال ليتيح رؤية بقية محتوى الصفحة */
+        max-height: 250px; 
+    }
+    
+    /* ضمان عرض الصور بملء عرض الحاوية */
+    .project-gallery-scroll img {
+        width: 100%;
+    }
+.btn-live-link {
+        width: 100%; 
+        box-sizing: border-box; 
+        text-align: center;
+    }
