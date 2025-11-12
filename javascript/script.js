@@ -61,9 +61,34 @@ if (span) {
 }
 // -----------------------------------------------
 // تهيئة سلايدر المشاريع (Projects Swiper)
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
     
     // تأكدي من أن هذا هو الكود الصحيح لسلايدر المشاريع
+//     var projectsSwiper = new Swiper(".projectsSwiper", {
+//         autoplay: {
+//             delay: 4500,
+//             disableOnInteraction: false, 
+//         },
+//         loop: true, 
+//         spaceBetween: 30,
+//         pagination: {
+//             el: ".swiper-pagination",
+//             clickable: true,
+//         },
+//         breakpoints: {
+//             0: { slidesPerView: 1, },
+//             768: { slidesPerView: 2, },
+//             1024: { slidesPerView: 3, },
+//         },
+//         navigation: {
+//             nextEl: ".swiper-button-next",
+//             prevEl: ".swiper-button-prev",
+//         },
+//     });
+// });
+// في ملف script.js
+document.addEventListener('DOMContentLoaded', function() {
+    
     var projectsSwiper = new Swiper(".projectsSwiper", {
         autoplay: {
             delay: 4500,
@@ -71,18 +96,23 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         loop: true, 
         spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            0: { slidesPerView: 1, },
-            768: { slidesPerView: 2, },
-            1024: { slidesPerView: 3, },
-        },
+        slidesPerView: 'auto', // 💥 تم التغيير إلى Auto
+        
+        // 💡 لا تحتاج إلى تحديد breakpoints بعد الآن طالما نستخدم 'auto'
+        
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+});
+
+// --------------------------------------
+document.querySelectorAll('.image-gallery').forEach(function (container) {
+    new Swiper(container, {
+        direction: 'vertical', // 💥 الأهم: يجعل التمرير عمودياً
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        // لا نحتاج لـ navigation arrows هنا إذا كنا نعتمد على تمرير المتصفح اليدوي
     });
 });
