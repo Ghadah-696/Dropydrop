@@ -250,7 +250,7 @@ nav h2{
     transition: .4s;
 }
 .btn2{
-    color: var(--sections);
+    color: var(--webbg);
     text-decoration: none;
 }
 .btn2:hover{
@@ -266,6 +266,12 @@ nav h2{
    .slide-home{
     padding: auto;
    }
+   /* تأكدي من أن الحاوية الأب تستخدم Flexbox */
+.slide-home .content {
+    display: flex; 
+    align-items: center; /* لمواءمة العناصر عمودياً */
+    justify-content: space-between; /* للتوزيع بين النصوص والصور */
+}
 .home{
     width: 100%;
     height: 90vh;
@@ -304,12 +310,16 @@ flex-direction: column;
     height: 65%;
 } */
 .home .container-imges img{
-    position: absolute;
+width: 100%;  /* 💥 يجعل الصورة تملأ عرض الحاوية */
+    height: 100%; /* 💥 يجعل الصورة تملأ ارتفاع الحاوية */
+    object-fit: contain;
+
+    /* position: absolute;
     bottom: 0;
     height: 100%;
 left: 50%;
 transform: translatex(-50%);
-transition: bottom 1s, left 1s;
+transition: bottom 1s, left 1s; */
 
 }
 .home .container-imges:hover .shape{
@@ -320,13 +330,13 @@ transition: bottom 1s, left 1s;
     left: 45%;
 
 }
-.home .container-imges .pct{
-    width: 50%;
-}
 .home .container-imges .shape{
 width: 70%;
 /* height: 118%; */
 }
+/* .home .pct{
+    width: 30%;
+} */
 /*-------------------------------------------------------------------
   ---------- About section
    ------------------------------------------------------------------*/
@@ -397,7 +407,7 @@ footer .footicn .container-imges  img {
 .projectsSwiper  {
     overflow: hidden;
 }
-/* .projectsSwiper .swiper-slide {
+.projectsSwiper .swiper-slide {
     width: auto !important; /* إلغاء أي عرض خارجي */
     box-sizing: border-box; 
     
@@ -406,7 +416,7 @@ footer .footicn .container-imges  img {
     
     display: flex; /* يُساعد في توسيط المحتوى داخل الشريحة */
     justify-content: center;
-} */
+} 
 /*-------------------------------------------------------------------
   ---------- Projects section
    ------------------------------------------------------------------*/
@@ -1402,7 +1412,7 @@ footer  .bgf .footicn .content .container-texts{
         height:fit-content ;
     }
     .home .container-imges{
-        display: none;
+        display: flex;
     }
     .home .container-texts{
         bottom: 0;
